@@ -1,9 +1,10 @@
 const myCountPromise = (param) => {
-    if(param != undefined){
-        console.log(param * 2)
-    }
     return new Promise( (resolve, reject) => {
-        resolve("");
+        if(param != undefined){
+            resolve(param * 2)
+        }else{
+            reject("Maaf tidak ada nilai dalam parameter")
+        }
     })
   }
 

@@ -1,0 +1,15 @@
+.container{
+  width: 50%;
+  margin: auto;
+  padding: 45px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow: 8px 10px 10px -4px rgba(0,0,0,0.49);
+  -webkit-box-shadow: 8px 10px 10px -4px rgba(0,0,0,0.49);
+  -moz-box-shadow: 8px 10px 10px -4px rgba(0,0,0,0.49);
+}
+
+hr{
+  margin-bottom: 25px;
+}
