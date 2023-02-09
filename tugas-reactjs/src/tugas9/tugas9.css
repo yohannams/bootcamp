@@ -1,0 +1,12 @@
+.textAngka{
+    text-align: center;
+    display: block;
+}
+.btnTambah{
+  width: 100%;
+  padding:10px;
+  margin-top: 10px;
+}
+.container{
+  margin-bottom: 100px !important;
+}
