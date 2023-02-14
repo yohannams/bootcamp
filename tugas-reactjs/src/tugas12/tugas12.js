@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const Tugas11 = () => {
+const Tugas12 = () => {
     const [data,setData] = useState(null)
     const [input,setInput] = useState({
         name: "",
@@ -143,4 +143,4 @@ const Tugas11 = () => {
   );
 };
 
-export default Tugas11;
+export default Tugas12;
