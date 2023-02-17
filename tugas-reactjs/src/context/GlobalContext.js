@@ -1,9 +1,11 @@
 import axios from "axios";
 import { createContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const GlobalContext = createContext()
 
 export const GlobalProvider =  (props) => {
+    let navigate = useNavigate();
     const [data,setData] = useState(null)
     const [input,setInput] = useState({
         name: "",
@@ -37,6 +39,7 @@ export const GlobalProvider =  (props) => {
             axios.post('https://backendexample.sanbercloud.com/api/student-scores', {name,course,score})
             .then((res)=>{
                 setFetchStatus(true)
+                navigate('/tugas15')
             })
             .catch((err)=>{
     
@@ -45,6 +48,7 @@ export const GlobalProvider =  (props) => {
             axios.put(`https://backendexample.sanbercloud.com/api/student-scores/${currentId}`,{name,course,score})
             .then((res)=>{
                 setFetchStatus(true)
+                navigate('/tugas15')
             })
             .catch((err)=>{
 
@@ -61,19 +65,8 @@ export const GlobalProvider =  (props) => {
 
     const handleEdit = (event)=>{
         let idData = parseInt(event.target.value)
-        axios.get(`https://backendexample.sanbercloud.com/api/student-scores/${idData}`)
-        .then((res)=>{
-            let result = res.data;
-            setInput({
-                name: result.name,
-                course: result.course,
-                score: result.score
-            })
-            setCurrentId(result.id)
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
+        setCurrentId(idData)
+        navigate(`/edit/${idData}`)
     }
 
     const handleDelete = (event)=>{
