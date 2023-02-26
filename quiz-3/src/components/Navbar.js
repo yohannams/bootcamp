@@ -17,7 +17,11 @@ const Navbar = () => {
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
                             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+<<<<<<< HEAD
                             clipRule="evenodd"></path>
+=======
+                            clip-rule="evenodd"></path>
+>>>>>>> f717ec58271b0f6318389e10bd4ac57ca0c4d2c3
                     </svg>
                 </button>
                 <div className="hidden w-full md:block md:w-auto" id="navbar-default">
